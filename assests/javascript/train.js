@@ -15,7 +15,8 @@ var database = firebase.database();
     //Grabs user input
     var trainName = $("#name-input").val().trim();
     var destinationTime =$("#destination").val().trim();
-    var firstTrain = $("#first-input").val().trim();
+    var firstTrain = moment($("#first-input").val().trim(), "HH:mm").format("hh:mm");
+    //var firstTrain =$("#first-input").val().trim();
     var frequencyTime =$("#frequency").val().trim();
    //creats local "temporary" object for holding tarin data
     var newTrain ={
