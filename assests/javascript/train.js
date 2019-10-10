@@ -33,6 +33,7 @@ var database = firebase.database();
     console.log(newTrain.train);
     console.log(newTrain.time);
     alert("Train successfully added");
+
     //clear all of the text-boxes
     $("#name-input").val("");
     $("#destination").val("");
@@ -53,6 +54,27 @@ database.ref().on("child_added",function(childSnapshot){
     console.log(destinationTime);
     console.log(firstTrain);
     console.log(frequencyTime);
+    var tFrequency = 5;
+    var firstTime = "3:30";
+    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
+     // Current Time
+     var currentTime = moment();
+     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+ 
+     // Difference between the times
+     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+     console.log("DIFFERENCE IN TIME: " + diffTime);
+ 
+     // Time apart (remainder)
+     var tRemainder = diffTime % tFrequency;
+     console.log(tRemainder);
+ 
+     // Minute Until Train
+     var tMinutesTillTrain = tFrequency - tRemainder;
+     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    
+
     
     //
     var newRow = $("<tr>").append(
@@ -60,6 +82,7 @@ database.ref().on("child_added",function(childSnapshot){
       $("<td>").text(destinationTime),
       $("<td>").text(frequencyTime),
       $("<td>").text(firstTrain),
+      $("<td>").text(tRemainder),
     );
     $(".table > tbody").append(newRow);
 
