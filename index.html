@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assests/css/style.css">
+  
+</head>
+
+<body>
+  <div class="jumbotron" style="background-color:black;color: white">
+    <h1 class="text-center">Anytime is Train Time</h1>
+    <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+
+    <!-- Sign-Up Card-->
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          Current Train Schedule
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 ">
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Train name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency(min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minute Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+
+
+
+
+  <div class="row">
+
+    <!-- Sign-Up Card-->
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          Add Train
+        </div>
+      </div>
+
+      <div class="card-body">
+
+        <!-- Sign-up Form (note the various input "types")-->
+        <form role="form">
+          <div class="form-group row">
+            <label for="name-input">Train name</label>
+            <input class="form-control" id="name-input" type="text">
+          </div>
+          <div class="form-group row">
+            <label for="name-input">Destination</label>
+            <input class="form-control" id="destination" type="text">
+          </div>
+          <div class="form-group row">
+            <label for="time-input">First Train Time (HH:mm-military time)</label>
+            <input class="form-control" id="first-input" type="text">
+          </div>
+          <div class="form-group row">
+            <label for="frequency-input">Frequency (min)</label>
+            <input class="form-control" id="frequency" type="text">
+
+          </div>
+          <button class="btn btn-dark" id="add-user" type="submit">Submit</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+
+<script src = "assests/javascript/train.js"></script>
+
+
+
+</body>
+
+</html>
