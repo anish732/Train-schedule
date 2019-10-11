@@ -54,8 +54,8 @@ database.ref().on("child_added",function(childSnapshot){
     console.log(destinationTime);
     console.log(firstTrain);
     console.log(frequencyTime);
-    var tFrequency = 5;
-    var firstTime = "3:30";
+    var tFrequency = childSnapshot.val().time;
+    var firstTime = childSnapshot.val().train;
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
      // Current Time
