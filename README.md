@@ -1,26 +1,24 @@
 # Train-schedule
 
+![](train-icone.png)
+
 ![](train.png)
 
 #### download firebase from [google.com]()
+
 #### Technologies used:
+
 <ul>
 
-* HTML
+- HTML
 
-* firebase
+- firebase
 
-* css(bootstrap)
+- css(bootstrap)
 
-* javascript(jquery,moment.js)
+- javascript
 
+  - jquery
+  - moment.js
 
-#### Code :
-
-![](train-icone.png)
-
-    <h1 class="text-center"><img src="train-icone.png"> Anytime is Train Time</h1>
- Add train icon next to the heading.
-
-
-
+</ul>
